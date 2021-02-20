@@ -2,11 +2,11 @@ from tensorflow.keras.models import model_from_json
 from tensorflow.python.keras.backend import set_session
 import numpy as np
 
-import tensorflow as tf
+import tensorflow.compat.v1 as v
 
-config = tf.compat.v1.ConfigProto()
+config = v.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.15
-session = tf.compat.v1.Session(config=config)
+session = v.Session(config=config)
 set_session(session)
 
 
