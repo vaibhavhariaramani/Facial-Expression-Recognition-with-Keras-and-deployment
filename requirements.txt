@@ -8,10 +8,6 @@ numpy==1.18.4
 opencv-python==4.2.0.34
 pandas==1.0.3
 pillow==7.1.2
-requests-oauthlib==1.3.0
-requests==2.23.0
-tensorboard-plugin-wit==1.6.0.post3
-tensorboard==2.2.1
-tensorflow-estimator==2.2.0
-tensorflow==2.2.0
+tensorflow.compat.v1==2.2.0
+tensorflow.keras.models==2.2.0
 wheel==0.34.2; python_version >= '3'
