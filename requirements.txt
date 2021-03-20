@@ -1,12 +1,7 @@
-flask==1.1.2
+Flask==1.1.2
 gunicorn==19.9.0
-jinja2==2.11.2
-json5==0.9.4
-jsonschema==3.2.0
-keras-preprocessing==1.1.2
-numpy==1.18.4
-opencv-python==4.2.0.34
-pandas==1.0.3
-pillow==7.1.2
-tensorflow==2.2.0
-wheel==0.34.2; python_version >= '3'
+tensorflow_cpu==2.4.1
+numpy==1.19.5
+opencv_contrib_python==4.5.1.48
+tensorflow==2.4.1
+
