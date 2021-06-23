@@ -1,6 +1,6 @@
 # Facial-Expression-Recognition-with-Keras-and-deployment
 
-I built and trained a convolutional neural network (CNN) in Keras from scratch to recognize facial expressions. The data consists of 48x48 pixel grayscale images of faces. The objective is to classify each face based on the emotion shown in the facial expression into one of seven categories (`0=Angry`, `1=Disgust`, `2=Fear`, `3=Happy`, `4=Sad`, `5=Surprise`, `6=Neutral`). I used OpenCV to automatically detect faces in images and draw bounding boxes around them. I had trained, saved, and exported the CNN, I directly served the trained model to a web interface and perform real-time facial expression recognition on video and image data and thrn deployed it using heroku.
+I built and trained a convolutional neural network (CNN) in Keras from scratch to recognize facial expressions. The data consists of 48x48 pixel grayscale images of faces. The objective is to classify each face based on the emotion shown in the facial expression into one of seven categories (`0=Angry`, `1=Disgust`, `2=Fear`, `3=Happy`, `4=Sad`, `5=Surprise`, `6=Neutral`). I used OpenCV to automatically detect faces in images and draw bounding boxes around them. I had trained, saved, and exported the CNN, I directly served the trained model to a web interface and perform real-time facial expression recognition on video and image data and then deployed it using heroku.
 
 ## step-by-step description
 
@@ -14,7 +14,7 @@ I built and trained a convolutional neural network (CNN) in Keras from scratch t
 - 8.) [Create a Class to Output Model Predictions]()
 - 9.) [Design an HTML Template for the Flask App]()
 - 10.) [Use Model to Recognize Facial Expressions in Videos]()
--11.) [Deploy on heroku]()
+- 11.) [Deploy on heroku]()
 
 #### For Complete info checkout my [Medium Blog]() on [Facial Expression Detection]()
 
