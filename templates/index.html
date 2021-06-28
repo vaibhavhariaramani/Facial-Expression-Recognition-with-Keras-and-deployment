@@ -1,136 +1,165 @@
 <html>
-  <head>
 
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title>Face expression recognition</title>
     <!-- Favicons -->
-  <link href="assets/img/favicon1.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <meta name="description" content=" Welcome to Facial Expression Recognition with Keras! Developed by Vaibhav hariramani ">
-<meta name="keywords" content="Facial Expression Recognition with Keras,Facial Expression Detection,Emotion Detection,Sentiment Analysis, facial expression detection by vaibhav hariramani,Facial emotion recognition using convolutional neural network, facial Expresssion detection Live,Real Time Facial Expresssion Recognition,Facial expression (mood) recognition from live video_feed,facial Expresssion detection github,facial expression recognition using machine learning,facial expression recognition deep learning,facial expression recognition deep learning,facial expression recognition project,emotion detection from facial expressions,facial expression recognition with Keras,facial expression recognition dataset,Facial Expression Recognition (FER),face emotion recognition using deep learning,Emotion recognition from facial expression using deep learning">
-<meta name="news_keywords" content="Facial expression recognition using deep neural networks by vaibhav hariramani,Deep learning methods for facial Expression Recognition,Facial Expression Recognition via Deep learning,Deep learning Model for Facial Emotion Recognition,Deep learning for real-time Robust Facial Expression Analysis,Facial Expression Recognition with Keras,Facial Expression Degtection by Vaibhav hariramani ,Emotion Detection by Vaibhav hariramani ,Sentiment Analysis by Vaibhav hariramani , facial expression detection by vaibhav hariramani,Facial emotion recognition using convolutional neural network by Vaibhav hariramani , facial Expresssion detection Live by Vaibhav hariramani ,Real Time Facial Expresssion Recognition by Vaibhav hariramani ,Facial expression (mood) recognition from live video_feed by Vaibhav hariramani ,facial Expresssion detection github by Vaibhav hariramani ,facial expression recognition using machine learning by Vaibhav hariramani ,facial expression recognition deep learning by Vaibhav hariramani ,facial expression recognition deep learning,facial expression recognition project by Vaibhav hariramani ,emotion detection from facial expressions by Vaibhav hariramani ,facial expression recognition with Keras,facial expression recognition dataset by Vaibhav hariramani ,Facial Expression Recognition (FER) by Vaibhav hariramani ,face emotion recognition using deep learning,Emotion recognition from facial expression using deep learning by Vaibhav hariramani ">
+    <link href="assets/img/favicon1.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <meta name="description" content=" Welcome to Facial Expression Recognition with Keras! Developed by Vaibhav hariramani ">
+    <meta name="keywords" content="Facial Expression Recognition with Keras,Facial Expression Detection,Emotion Detection,Sentiment Analysis, facial expression detection by vaibhav hariramani,Facial emotion recognition using convolutional neural network, facial Expresssion detection Live,Real Time Facial Expresssion Recognition,Facial expression (mood) recognition from live video_feed,facial Expresssion detection github,facial expression recognition using machine learning,facial expression recognition deep learning,facial expression recognition deep learning,facial expression recognition project,emotion detection from facial expressions,facial expression recognition with Keras,facial expression recognition dataset,Facial Expression Recognition (FER),face emotion recognition using deep learning,Emotion recognition from facial expression using deep learning">
+    <meta name="news_keywords" content="Facial expression recognition using deep neural networks by vaibhav hariramani,Deep learning methods for facial Expression Recognition,Facial Expression Recognition via Deep learning,Deep learning Model for Facial Emotion Recognition,Deep learning for real-time Robust Facial Expression Analysis,Facial Expression Recognition with Keras,Facial Expression Degtection by Vaibhav hariramani ,Emotion Detection by Vaibhav hariramani ,Sentiment Analysis by Vaibhav hariramani , facial expression detection by vaibhav hariramani,Facial emotion recognition using convolutional neural network by Vaibhav hariramani , facial Expresssion detection Live by Vaibhav hariramani ,Real Time Facial Expresssion Recognition by Vaibhav hariramani ,Facial expression (mood) recognition from live video_feed by Vaibhav hariramani ,facial Expresssion detection github by Vaibhav hariramani ,facial expression recognition using machine learning by Vaibhav hariramani ,facial expression recognition deep learning by Vaibhav hariramani ,facial expression recognition deep learning,facial expression recognition project by Vaibhav hariramani ,emotion detection from facial expressions by Vaibhav hariramani ,facial expression recognition with Keras,facial expression recognition dataset by Vaibhav hariramani ,Facial Expression Recognition (FER) by Vaibhav hariramani ,face emotion recognition using deep learning,Emotion recognition from facial expression using deep learning by Vaibhav hariramani ">
 
-<!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="../static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="../static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .verticalhorizontal {
+            display: table-cell;
+            height: 300px;
+            text-align: center;
+            width: 300px;
+            vertical-align: middle;
+        }
+        
+        aligncenter {
+            text-align: center;
+        }
+        
+        .img-container {
+            text-align: center;
+        }
+    </style>
+</head>
 
-  	<nav class="orange lighten-1" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Face expression recognition By Vaibhav</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://github.com/vaibhavhariaramani"><b>Github repo</b><i class="fa fa-github" style="font-size:36px"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/"><i class="fa fa-linkedin" style="font-size:36px"></i></a></li>
-        <li><a href="https://medium.com/@vaibhav.hariramani01"><i class="fa fa-medium" style="font-size:26px"></i></a></li>
-        <li><a href="https://github.com/vaibhavhariaramani/Machine-Learning-Projects-and-Tutorials"><b>OTHER ML MODELS</b></a></li>
-        <li><a href="https://vaibhavhariaramani.github.io/blogs/"><b>BLOGS</b></a></li>
-        <li><a href="https://vaibhavhariaramani.github.io/"><b>MY PORTFOLIO</b></a></li>
-      </ul>
+<body>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+    <nav class="orange lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="https://sites.google.com/view/geeky-traveller/home" class="brand-logo">Emotor</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/vaibhavhariaramani"><b>Github repo</b><i class="fa fa-github" style="font-size:36px"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/"><i class="fa fa-linkedin" style="font-size:36px"></i></a></li>
+                <li><a href="https://medium.com/@vaibhav.hariramani01"><i class="fa fa-medium" style="font-size:26px"></i></a></li>
+                <li><a href="https://github.com/vaibhavhariaramani/Machine-Learning-Projects-and-Tutorials"><b>OTHER ML MODELS</b></a></li>
+                <li><a href="https://vaibhavhariaramani.github.io/blogs/"><b>BLOGS</b></a></li>
+                <li><a href="https://vaibhavhariaramani.github.io/"><b>MY PORTFOLIO</b></a></li>
+            </ul>
 
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <!-- <br> -->
-      <h1 class="header center orange-text">Facial Expression Recognition with Keras</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Welcome to Facial Expression Recognition with Keras! Developed by Vaibhav hariramani
-        <br>
-        </h5>
-        The objective is to classify each face based on the emotion shown in the facial expression into one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral).
-      </div>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
 
-    <img id="bg" width=1250px height=900px src="{{ url_for('video_feed') }}">
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <!-- <br> -->
+            <h1 class="header center orange-text">Facial Expression Recognition with Keras</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Welcome to Facial Expression Recognition with Keras! Developed by Vaibhav hariramani
+                    <br>
+                </h5>
+            </div>
+            <div class="img-container">
+                <!-- <center> -->
+                <img align="middle" id="bg" width=900px height=600px src="{{ url_for('video_feed') }}">
+                <!-- </center> -->
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col 46 s12">
+                        <a href="https://www.kaggle.com/ashydv/advertising-dataset" target="_blank" rel="noopener noreferrer"><button class="btn-large waves-effect waves-light orange">About DATASET USED</button></a>
+                        <a href="../sales-prediction-simple-linear-regression.ipynb" target="_blank" rel="noopener noreferrer"><button class="btn-large waves-effect waves-light orange">OUR SOLUTION AND EDA</button></a>
 
-    <br>
-   <br>
-   <div class="container">
-      <div class="row">
-        <div class="col 26 s12">
-   <a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/overview" target="_blank" rel="noopener noreferrer"><button class="btn-large waves-effect waves-light orange">About Problem Solved</button></a>
-   <a href="https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset" target="_blank" rel="noopener noreferrer"><button class="btn-large waves-effect waves-light orange">About DATASET USED</button></a>
-   <a href="https://github.com/vaibhavhariaramani/Facial-Expression-Recognition-with-Keras-and-deployment" target="_blank" rel="noopener noreferrer"><button class="btn-large waves-effect waves-light orange">MY SOLUTION AND ipynb</button></a>
+                    </div>
+                </div>
 
-  </div>
-</div>
+            </div>
 
-</div>
-
-<footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About Me</h5>
-          <p class="grey-text text-lighten-4"><h6>I'm vaibhav Hariramani a M.L. enthusiast. I create blogs and open source projects about <b>Machine Learning</b>, <b>Computer Vision</b> and <b>
+            <footer class="page-footer orange">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">About Me</h5>
+                            <p class="grey-text text-lighten-4">
+                                <h6>I'm vaibhav Hariramani a M.L. enthusiast. I create blogs and open source projects about <b>Machine Learning</b>, <b>Computer Vision</b> and <b>
           App Development</b>. </h6>
-          <br><h6>I have a keen interest in Image processing and Andriod development. You can see a full list of projects what I am up to on <a href="https://vaibhavhariaramani.github.io/blogs/"><b>My Blogs</b></a> & <a href="https://sites.google.com/view/geeky-traveller/"><b>Geeky-Traveller</b></a>.
-           </h6> </p>
-           <section id="block-block-14" class="block block-block col-xs-6 col-xss-12 contact-details clearfix" align="left">
-            <ul class="social-media-icons">
-    <li><a href="https://medium.com/@vaibhav.hariramani01" ><i class="fa fa-medium fa-2x">&nbsp;</i></a><a href="https://www.instagram.com/geeky_bawa_/" ><i class="fa fa-instagram fa-2x">&nbsp;</i></a><a href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/" ><i class="fa fa-linkedin fa-2x">&nbsp;</i></a><a href="mailto:vaibhav.hariramani01@gmail.com" ><i class="fa fa-google fa-2x">&nbsp;</i></a><a href="https://www.youtube.com/channel/UCy7amUpLnsRLEMIaJGGBYog" ><i class="fa fa-youtube fa-2x">&nbsp;</i></a><a href="https://wa.me/+917790991077" ><i class="fa fa-whatsapp fa-2x">&nbsp;</i></a><a href="https://github.com/vaibhavhariaramani"><i class="fa fa-github fa-2x">&nbsp;</i></a><a href="https://www.facebook.com/jayesh.hariramani.3" ><i class="fa fa-facebook fa-2x">&nbsp;</i></a><a href="https://twitter.com/vaibhavhariram2"><i class="fa fa-twitter fa-2x">&nbsp;</i></a></li>
-  </ul>
-  </section>
+                                <br>
+                                <h6>I have a keen interest in Image processing and Andriod development. You can see a full list of projects what I am up to on <a href="https://vaibhavhariaramani.github.io/blogs/"><b>My Blogs</b></a> & <a href="https://sites.google.com/view/geeky-traveller/"><b>Geeky-Traveller</b></a>.
+                                </h6>
+                            </p>
+                            <section id="block-block-14" class="block block-block col-xs-6 col-xss-12 contact-details clearfix" align="left">
+                                <ul class="social-media-icons">
+                                    <li><a href="https://www.instagram.com/geeky_bawa_/"><i class="fa fa-instagram fa-2x">&nbsp;</i></a><a href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/"><i class="fa fa-linkedin fa-2x">&nbsp;</i></a>
+                                        <a href="mailto:vaibhav.hariramani01@gmail.com"><i class="fa fa-google fa-2x">&nbsp;</i></a><a href="https://www.youtube.com/channel/UCy7amUpLnsRLEMIaJGGBYog"><i class="fa fa-youtube fa-2x">&nbsp;</i></a>
+                                        <a href="https://wa.me/+917790991077"><i class="fa fa-whatsapp fa-2x">&nbsp;</i></a>
+                                        <a href="https://github.com/vaibhavhariaramani"><i class="fa fa-github fa-2x">&nbsp;</i></a><a href="https://www.facebook.com/jayesh.hariramani.3"><i class="fa fa-facebook fa-2x">&nbsp;</i></a>
+                                        <a href="https://twitter.com/vaibhavhariram2"><i class="fa fa-twitter fa-2x">&nbsp;</i></a>
+                                    </li>
+                                </ul>
+                            </section>
 
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Other Projects</h5>
-          <ul>
-            <li><a class="white-text" href="hhttps://github.com/vaibhavhariaramani/control-mouse-via-hand-gestures"><b>control-mouse-via-hand</b></a></li>
-            <li><a class="white-text" href="https://github.com/vaibhavhariaramani/FaceDetection"><b>FaceDetection</b></a></li>
-            <li><a class="white-text" href="https://github.com/vaibhavhariaramani/Computer-Vision-Tutorial"><b>Computer-Vision</b></a></li>
-            <li><a class="white-text" href="https://github.com/vaibhavhariaramani/Machine-Learning-Projects-and-Tutorials"><b>Machine-Learning-Projects</b></a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Blogs Link</h5>
-          <ul>
-            <li><b>CHECKOUT OUR BLOGS AT :</b></li>
-            <li><a class="white-text" href="https://medium.com/geeky-bawa" target="_blank" rel="noopener noreferrer"><b>Medium</b></a></li>
-            <li><a class="white-text" href="https://vaibhavhariaramani.github.io/blogs/" target="_blank" rel="noopener noreferrer"><b>MY BLOGS</b></a></li>
-            <li><a class="white-text" href="https://sites.google.com/view/geeky-traveller/home" target="_blank" rel="noopener noreferrer"><b>GEEKY TRAVELLER</b></a></li>
-            
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Get Connect with us</h5>
-          <ul>
-            <li><a class="white-text" href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/"><i class="fa fa-linkedin fa-2x">&nbsp;</i><b>Linkedin</b></a></li>
-            <li><a class="white-text" href="https://www.youtube.com/channel/UCy7amUpLnsRLEMIaJGGBYog"><i class="fa fa-youtube fa-2x">&nbsp;</i><b>Youtube</b></a></li>
-            <li><a class="white-text" href="https://github.com/vaibhavhariaramani"><i class="fa fa-github" style="font-size:36px"></i><b>Github</b></a></li>
-            <li><a class="white-text" href="https://medium.com/@vaibhav.hariramani01"><i class="fa fa-medium fa-2x">&nbsp;</i><b>Medium</b></a></li>
-            <li><a class="white-text" href="https://www.instagram.com/geeky_bawa_/"><i class="fa fa-instagram fa-2x">&nbsp;</i><b>instagram</b></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      <p class="copyright-text">
+                        </div>
+                        <div class="col l3 s12">
+                            <h5 class="white-text">Other Projects</h5>
+                            <ul>
+                                <li><a class="white-text" href="hhttps://github.com/vaibhavhariaramani/control-mouse-via-hand-gestures"><b>control-mouse-via-hand</b></a></li>
+                                <li><a class="white-text" href="https://github.com/vaibhavhariaramani/FaceDetection"><b>FaceDetection</b></a></li>
+                                <li><a class="white-text" href="https://github.com/vaibhavhariaramani/Computer-Vision-Tutorial"><b>Computer-Vision</b></a></li>
+                                <li><a class="white-text" href="https://github.com/vaibhavhariaramani/Machine-Learning-Projects-and-Tutorials"><b>Machine-Learning-Projects</b></a></li>
+                            </ul>
+                        </div>
+                        <div class="col l3 s12">
+                            <h5 class="white-text">Blogs Link</h5>
+                            <ul>
+                                <li><b>CHECKOUT OUR BLOGS AT :</b></li>
+                                <li><a class="white-text" href="https://medium.com/geeky-bawa" target="_blank" rel="noopener noreferrer"><b>Medium</b></a></li>
+                                <li><a class="white-text" href="https://vaibhavhariaramani.github.io/blogs/" target="_blank" rel="noopener noreferrer"><b>MY BLOGS</b></a></li>
+                                <li><a class="white-text" href="https://sites.google.com/view/geeky-traveller/home" target="_blank" rel="noopener noreferrer"><b>GEEKY TRAVELLER</b></a></li>
 
-         Made with ❤️by <a href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/" style="color:blue;">Vaibhav Hariramani</a>&nbsp;
+                            </ul>
+                        </div>
+                        <div class="col l3 s12">
+                            <h5 class="white-text">Get Connect with us</h5>
+                            <ul>
+                                <li><a class="white-text" href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/"><i class="fa fa-linkedin fa-2x">&nbsp;</i><b>Linkedin</b></a></li>
+                                <li><a class="white-text" href="https://www.youtube.com/channel/UCy7amUpLnsRLEMIaJGGBYog"><i class="fa fa-youtube fa-2x">&nbsp;</i><b>Youtube</b></a></li>
+                                <li><a class="white-text" href="https://github.com/vaibhavhariaramani"><i class="fa fa-github" style="font-size:36px"></i><b>Github</b></a></li>
+                                <li><a class="white-text" href="https://www.instagram.com/geeky_bawa_/"><i class="fa fa-instagram fa-2x">&nbsp;</i><b>instagram</b></a></li>
+                                <li><a class="white-text" href="https://medium.com/geeky-bawa"><i class="fa fa-medium fa-2x">&nbsp;</i><b>Medium</b></a></li>
 
-         <div class="col l3 s12">
-        Download <a  href="https://github.com/vaibhavhariaramani/The-Vaibhav-Hariramani-App/raw/master/vaibhav%20hariramani%20app.apk"><b>THE VAIBHAV HARIRAMANI APP</b></a> which consist of Tutorials,Projects,Blogs and Vlogs of our <a class="white-text" href="https://sites.google.com/view/geeky-traveller/home">Site</a> . Get Notification of our latest blogs.
-      </div>
-      </p>
-      </div>
-    </div>
-  </footer>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <p class="copyright-text">
 
- <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src=".js/materialize.js"></script>
-  <script src="js/init.js"></script>
+                            Made with ❤️by <a href="https://www.linkedin.com/in/vaibhav-hariramani-087488186/" style="color:blue;">Vaibhav Hariramani</a>&nbsp;
 
-  </body>
+                            <div class="col l3 s12">
+                                Download <a href="https://play.google.com/store/apps/details?id=com.geeky.developer"><b>THE VAIBHAV HARIRAMANI APP</b></a> which consist of Tutorials,Projects,Blogs and Vlogs of our <a class="white-text" href="https://sites.google.com/view/geeky-traveller/home">Site</a>                                . Get Notification of our latest blogs.
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+            <!--  Scripts-->
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src=".js/materialize.js"></script>
+            <script src="js/init.js"></script>
+
+</body>
+
 </html>
